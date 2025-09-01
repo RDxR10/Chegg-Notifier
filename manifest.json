@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Chegg Notifier",
+  "version": "1.0",
+  "description": "Get a desktop notification whenever your Chegg Expert page updates.",
+  "permissions": [
+    "notifications",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://expert.chegg.com/qna/authoring/answer*"],
+      "js": ["content.js"],
+	  "run_at": "document_start"
+	  
+    }
+  ],
+  "icons": {
+    "128": "icon.png"
+  }
+}
+
