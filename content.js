@@ -1,4 +1,3 @@
-
 (function() {
     let lastTitle = document.title.trim();
     let changeCount = 0;
@@ -26,7 +25,7 @@
     handleTitleChange(document.title.trim());
     isInitialized = true;
 
-
+/*
     const target = document.querySelector('head > title');
     if (target) {
         const observer = new MutationObserver(function(mutations) {
@@ -42,7 +41,7 @@
             childList: true
         });
     }
-
+*/
 
     let pollingTitle = document.title.trim();
     setInterval(() => {
@@ -53,7 +52,7 @@
         }
     }, 1); 
 
-
+/*
     const originalDocumentTitle = Object.getOwnPropertyDescriptor(Document.prototype, 'title');
     if (originalDocumentTitle) {
         Object.defineProperty(Document.prototype, 'title', {
@@ -67,11 +66,6 @@
             get: originalDocumentTitle.get
         });
     }
-
+*/
     console.log('Chegg Notifier: Content script loaded and initialized');
 })();
-
-
-
-
-
